@@ -3,3 +3,14 @@ let playerSelection = playerChoice.toLowerCase();
     console.log(playRound(playerSelection, computerSelection));
 
     prompt('Input Rock, Paper or Scissors')
+
+    if (playerChoice === (null || undefined)) {
+        playerChoice = prompt('Input Rock, Paper or Scissors');
+        playerSelection = playerChoice.toLowerCase();
+        computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        result = playRound(playerSelection, computerSelection);
+        roundResult(result);
+        game();
+      } else 
