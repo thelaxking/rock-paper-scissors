@@ -1,0 +1,5 @@
+let playerSelection = playerChoice.toLowerCase();
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+
+    prompt('Input Rock, Paper or Scissors')
