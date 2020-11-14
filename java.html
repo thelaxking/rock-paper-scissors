@@ -7,13 +7,14 @@
 <body>
   <script>
     let choice = ["rock", "paper", "scissors"];
-    let playerChoice = null
+    let playerChoice = null;
     let gameCount = 0;
     let playerScore = 0;
     let computerScore = 0;
     let computerSelection = null;
     let playerSelection = null;
     let result = null;
+    let gameOf = null;
 
     function computerPlay() {
       let computerPick = choice[Math.floor(Math.random() * choice.length)];
@@ -70,8 +71,21 @@
       }
     }
 
+    function reset() {
+      gameCount = 0;
+      playerScore = 0;
+      computerScore = 0;
+      playerChoice = null;
+      gameOf = null;
+    }
+
+    function start() {
+      gameOf = parseInt(prompt('Input number of times to play'));
+      game();
+    }
+
     function game() {
-      if (gameCount < 5) {
+      if (gameCount < gameOf) {
         playerChoice = prompt('Input Rock, Paper or Scissors');
         playerSelection = playerChoice.toLowerCase();
         computerSelection = computerPlay();
@@ -80,22 +94,17 @@
         result = playRound(playerSelection, computerSelection);
         roundResult(result);
         game();
-      } else if ((gameCount === 5) && (playerScore != computerScore)) {
+      } else if ((gameCount === gameOf) && (playerScore != computerScore)) {
         alert("The winner is " + winner() + ".");
         console.log("Scores: Player = " + playerScore + ", Computer = " + computerScore + ".");
-        gameCount = 0;
-        playerScore = 0;
-        computerScore = 0;
-        playerChoice = null;
-      } else if ((gameCount === 5) && (playerScore == computerScore)) {
+        reset();
+      } else if ((gameCount === gameOf) && (playerScore == computerScore)) {
         alert("It's a tie!. Play again.")
         console.log("Scores: Player = " + playerScore + ", Computer = " + computerScore + ".");
-        gameCount = 0;
-        playerScore = 0;
-        computerScore = 0;
-        playerChoice = null;
+        reset();
       } else {
-        return "Opps! something went wrong here :("
+        return "Opps! something went wrong here :(";
+        reset();
       }
     }
   </script>
