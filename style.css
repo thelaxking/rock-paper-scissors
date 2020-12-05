@@ -2,7 +2,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     height: 100vh;
     background-color: aqua;
     margin: 0;
@@ -10,11 +9,11 @@ body {
 }
 
 #result {
-    height: 60%;
     width: 60%;
     display: flex;
     margin-top: 20px;
     justify-content: center;
+    flex-direction: column;
 }
 
 #buttons {
@@ -39,4 +38,17 @@ button {
     display: flex;
     margin-top: 20px;
     justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
