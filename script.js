@@ -1,3 +1,5 @@
+const ask = document.querySelector(".start");
+const reset = document.querySelector("#reset");
 let choice = ["rock", "paper", "scissors"];
 let playerChoice = null;
 let gameCount = 0;

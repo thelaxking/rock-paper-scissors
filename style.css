@@ -9,10 +9,12 @@ body {
     padding: 0;
 }
 
-#box {
+#result {
     height: 60%;
-    width: 50%;
+    width: 60%;
+    display: flex;
     margin-top: 20px;
+    justify-content: center;
 }
 
 #buttons {
@@ -26,15 +28,15 @@ body {
 
 button {
     color: rgba(255, 255, 255, 0.6);
-    background-color: teal !important;
+    background-color: teal;
     border-style: none;
     transition: 200ms;
     border-radius: 5%;
     padding: 3%;
 }
 
-#box {
-    height: 60%;
-    width: 60%;
+#instructions {
+    display: flex;
     margin-top: 20px;
+    justify-content: center;
 }
