@@ -1,3 +1,0 @@
-This will be my lessons txt file to document lessons learnt during this project
-#when functions modify values, we should know that modified form of those values are available only in the fuction
-# (result == "a" || "b" || "c") is wrong 
